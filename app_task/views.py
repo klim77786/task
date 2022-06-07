@@ -14,7 +14,7 @@ def create(request):
         form = TaskForm(request.POST)  # Получаем данные
         if form.is_valid():  # Если данные корректны то мы их сохраняем в Базу данных
             form.save()
-            return redirect('test')  # Переадресуем пользователя на другую страничку в данном случии test
+            return redirect('index')  # Переадресуем пользователя на другую страничку в данном случии test
         else:
             error = 'Форма была неверной'
 
